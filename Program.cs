@@ -1,3 +1,7 @@
+using System.Data;
+using GuitatrGeekFinalProject.Repositories;
+using MySql.Data.MySqlClient;
+
 namespace GuitatrGeekFinalProject
 {
     public class Program
@@ -8,6 +12,14 @@ namespace GuitatrGeekFinalProject
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+            builder.Services.AddScoped<IDbConnection>((s) =>
+            {
+                IDbConnection conn = new MySqlConnection(builder.Configuration.GetConnectionString("guitargeek"));
+                conn.Open();
+                return conn;
+            });
+
+            builder.Services.AddTransient<IGuitarRepository, GuitarRepository>();
 
             var app = builder.Build();
 

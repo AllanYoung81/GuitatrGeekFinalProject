@@ -1,0 +1,28 @@
+﻿@model IEnumerable<Guitar>
+
+<h2>Guitars</h2>
+<table class="table">
+    <tr>
+        <th>Guitar ID</th>
+        <th>Brand</th>
+        <th>Model</th>
+        <th>Guitar Type</th>
+        <th>Price</th>
+        <th>On Sale</th>
+        <th>Best Suitable For</th>
+    </tr>
+
+    @foreach (var guitar in @Model)
+    {
+        <tr>
+            <td>@guitar.GuitarID</td>
+            <td>@guitar.Brand</td>
+            <td>@guitar.Model</td>
+            <td>@guitar.GuitarType</td>
+            <td>@guitar.Price</td>
+            <td>@guitar.OnSale</td>
+            <td>@guitar.ForSkillLevel</td>
+        </tr>
+    }
+
+</table>
