@@ -2,6 +2,7 @@
 {
     public class Guitar
     {
+        
         public int GuitarID {  get; set; }
         public string Brand { get; set; }   
         public string Model { get; set; }
@@ -13,6 +14,8 @@
         public bool OnSale { get; set; }
 
         public string ForSkillLevel {  get; set; }  
+
+        public IEnumerable<GuitarCategory> GuitarCategories { get; set;}
     }
 
 }

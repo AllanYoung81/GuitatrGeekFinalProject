@@ -1,0 +1,38 @@
+﻿@model Guitar
+
+<h2>Guitars</h2>
+<table class="table">
+	<tr>
+		<th>Guitar ID</th>
+		<th>Brand</th>
+		<th>Model</th>
+		<th>Guitar Type</th>
+		<th>Price</th>
+		<th>On Sale</th>
+		<th>Best Suitable For</th>
+	</tr>
+
+	<tr>
+		<td>@Model.GuitarID</td>
+		<td>@Model.Brand</td>
+		<td>@Model.Model</td>
+		<td>@Model.GuitarType</td>
+		<td>@Model.Price</td>
+		<td>@Model.OnSale</td>
+		<td>@Model.ForSkillLevel</td>
+	</tr>
+
+</table>
+
+<div style="display: block">
+	<a href="/Guitar/UpdateGuitar/@Model.GuitarID">Update this guitar</a>
+</div>
+
+<div style="display: block">
+
+	@using (Html.BeginForm("DeleteGuitar", "guitar", "Post"))
+	{
+		<input type="hidden" asp-for="GuitarID" value="@Model.GuitarID" />
+		<input type="submit" onclick="return confirm('Are you sure?')" value="Delete this guitar" />
+	}
+</div>

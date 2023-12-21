@@ -1,0 +1,48 @@
+﻿@model Guitar
+
+<h2>Create a New Guitar</h2>
+
+@using (Html.BeginForm("InsertGuitarToDatabase", "Guitar", "Post"))
+{
+    <input asp-for="GuitarID" type="hidden" value="" />
+
+    <label asp-for="Brand" class="control-label">Brand</label>
+    <input type="text" name="Brand" class="form-control" value="" />
+
+    <label asp-for="Model" class="control-label">Model</label>
+    <input type="text" name="Model" class="form-control" value="" />
+
+    <label asp-for="GuitarType" class="control-label">Guitar Type</label>
+    <input type="text" name="GuitarType" class="form-control" value="" />
+
+    
+
+    <label asp-for="Price" class="control-label">Price</label>
+    <input type="number" step="0.01" name="Price" class="form-control" />
+    <br />
+    <label asp-for="OnSale" class="control-label">On Sale</label>
+    <select asp-for="OnSale" id="dropdown">
+        <option value="true">true</option>
+        <option value="false">false</option>
+    </select>
+    <br />
+    <br />
+
+    <label asp-for="ForSkillLevel" class="control-label">Recommended Skill Level</label>
+    <input type="text" name="ForSkillLevel" class="form-control" value="" />
+
+    <br />
+    <br />
+
+  @*   <div class="form-group">
+        <label for="">Select a Category</label>
+        <select class="form-control" name="GuitarID" value="">
+            @foreach (var cat in Model.GuitarCategories)
+            {
+                <option value="@cat.GuitarID">@cat.GuitarID @cat.Brand</option>
+            }
+        </select>
+    </div> *@
+
+    <input type="submit" value="Create Guitar" class="btn btn-primary" />
+}
