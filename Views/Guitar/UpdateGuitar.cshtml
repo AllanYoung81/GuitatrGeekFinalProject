@@ -7,13 +7,13 @@
     <input asp-for="GuitarID" type="hidden" value="@Model.GuitarID" />
 
     <label asp-for="Brand" class="control-label">Brand</label>
-    <input type="text" name="Brand" class="form-control" value="@Model.Brand" />
+    <input type="text" name="Brand" class="form-control" value="@Model.Brand" maxlength="90" />
 
     <label asp-for="Model" class="control-label">Model</label>
-    <input type="text" name="Model" class="form-control" value="@Model.Model" />
+    <input type="text" name="Model" class="form-control" value="@Model.Model" maxlength="90" />
 
     <label asp-for="GuitarType" class="control-label">Guitar Type</label>
-    <input type="text" name="GuitarType" class="form-control" value="@Model.GuitarType" />
+    <input type="text" name="GuitarType" class="form-control" value="@Model.GuitarType" maxlength="90" />
 
     <label asp-for="OnSale" class="control-label">On Sale</label>
     <select asp-for="OnSale" id="dropdown">
@@ -23,7 +23,7 @@
     <br />
 
     <label asp-for="ForSkillLevel" class="control-label">Recommended Skill Level</label>
-    <input type="text" name="ForSkillLevel" class="form-control" value="@Model.ForSkillLevel" />
+    <input type="text" name="ForSkillLevel" class="form-control" value="@Model.ForSkillLevel" maxlength="90" />
 
     
 
