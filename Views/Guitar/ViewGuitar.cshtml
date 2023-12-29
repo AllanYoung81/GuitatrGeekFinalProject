@@ -25,15 +25,25 @@
 </table>
 
 <div style="display: block">
-	<a href="/Guitar/UpdateGuitar/@Model.GuitarID">Update this guitar</a>
+	<a class="btn btn-warning" href="/Guitar/UpdateGuitar/@Model.GuitarID"><i class="bi bi-file-arrow-up"></i>Update this guitar</a>
+	
 </div>
+
+@* 
+//</div> *@
+
+
+
+
+
 </br>
+
 
 <div style="display: block">
 
 	@using (Html.BeginForm("DeleteGuitar", "guitar", "Post"))
 	{
 		<input type="hidden" asp-for="GuitarID" value="@Model.GuitarID" />
-		<input type="submit" onclick="return confirm('Are you sure?')" value="Delete this guitar" />
+		<button type="submit" onclick="return confirm('Are you sure?')" class="btn btn-danger"><i class="bi bi-trash3"></i>Delete this guitar</button>
 	}
 </div>
