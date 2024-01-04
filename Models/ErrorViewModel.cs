@@ -1,4 +1,4 @@
-namespace GuitatrGeekFinalProject.Models
+namespace GuitarGeekFinalProject.Models
 {
     public class ErrorViewModel
     {

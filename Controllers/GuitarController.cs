@@ -1,8 +1,8 @@
-﻿using GuitatrGeekFinalProject.Models;
-using GuitatrGeekFinalProject.Repositories;
+﻿using GuitarGeekFinalProject.Models;
+using GuitarGeekFinalProject.Repositories;
 using Microsoft.AspNetCore.Mvc;
 
-namespace GuitatrGeekFinalProject.Controllers
+namespace GuitarGeekFinalProject.Controllers
 {
     public class GuitarController : Controller
     {

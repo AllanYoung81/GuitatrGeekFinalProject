@@ -1,9 +1,9 @@
 ﻿using System.Data;
 using System.Net.Http.Headers;
 using Dapper;
-using GuitatrGeekFinalProject.Models;
+using GuitarGeekFinalProject.Models;
 
-namespace GuitatrGeekFinalProject.Repositories
+namespace GuitarGeekFinalProject.Repositories
 {
 
     public class GuitarRepository : IGuitarRepository

@@ -1,8 +1,8 @@
 using System.Data;
-using GuitatrGeekFinalProject.Repositories;
+using GuitarGeekFinalProject.Repositories;
 using MySql.Data.MySqlClient;
 
-namespace GuitatrGeekFinalProject
+namespace GuitarGeekFinalProject
 {
     public class Program
     {

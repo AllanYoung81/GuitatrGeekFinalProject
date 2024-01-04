@@ -1,40 +1,42 @@
 ﻿@model IEnumerable<Guitar>
+<div id="guitarContainer">
+    <h2>Guitars</h2>
+   
+    <div style="display: block; margin-bottom: 5px;">
+        <a class="btn btn-success" href="/Guitar/InsertGuitar/"><i class="bi bi-plus-square"></i> Create a New Guitar</a>
+    </div>
 
-<h2>Guitars</h2>
+    <div id="guitarTable">
 
-<div style="display: block">
-    <a class="btn btn-success" href="/Guitar/InsertGuitar/"><i class="bi bi-plus-square"></i> Create a New Guitar</a>
-    
-</div>
-
-<table class="table">
-    <tr>
-        <th>Guitar ID</th>
-        <th>Brand</th>
-        <th>Model</th>
-        <th>Guitar Type</th>
-        <th>Price</th>
-        <th>On Sale</th>
-        <th>Best Suitable For</th>
-    </tr>
-    @{
-        int counter = 1;
-    }
-
-    @foreach (var guitar in @Model)
-    {
+    <table class="table" style="border-style:solid; border-color:black; box-shadow: 2px 4px 15px black;">
         <tr>
-            @* <td><a href=/Guitar/ViewGuitar/@guitar.GuitarID>@guitar.GuitarID</a></td> *@
-            <td><a href=/Guitar/ViewGuitar/@guitar.GuitarID>@counter</td>
-            <td>@guitar.Brand</td>
-            <td>@guitar.Model</td>
-            <td>@guitar.GuitarType</td>
-            <td>@guitar.Price</td>
-            <td>@guitar.OnSale</td>
-            <td>@guitar.ForSkillLevel</td>
+            <th>Guitar ID</th>
+            <th>Brand</th>
+            <th>Model</th>
+            <th>Guitar Type</th>
+            <th>Price</th>
+            <th>On Sale</th>
+            <th>Best Suitable For</th>
         </tr>
+        @{
+            int counter = 1;
+        }
+
+        @foreach (var guitar in @Model)
+        {
+            <tr>
+                @* <td><a href=/Guitar/ViewGuitar/@guitar.GuitarID>@guitar.GuitarID</a></td> *@
+                <td><a href=/Guitar/ViewGuitar/@guitar.GuitarID>@counter</a></td>
+                <td>@guitar.Brand</td>
+                <td>@guitar.Model</td>
+                <td>@guitar.GuitarType</td>
+                <td>@guitar.Price</td>
+                <td>@guitar.OnSale</td>
+                <td>@guitar.ForSkillLevel</td>
+            </tr>
 
         counter++;
-    }
-
-</table>
+        }
+    </table>
+    </div>
+</div>

@@ -1,6 +1,6 @@
-﻿using GuitatrGeekFinalProject.Models;
+﻿using GuitarGeekFinalProject.Models;
 
-namespace GuitatrGeekFinalProject.Repositories
+namespace GuitarGeekFinalProject.Repositories
 {
     public interface IGuitarRepository
     {

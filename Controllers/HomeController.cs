@@ -1,8 +1,8 @@
 ﻿using System.Diagnostics;
-using GuitatrGeekFinalProject.Models;
+using GuitarGeekFinalProject.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace GuitatrGeekFinalProject.Controllers
+namespace GuitarGeekFinalProject.Controllers
 {
     public class HomeController : Controller
     {
